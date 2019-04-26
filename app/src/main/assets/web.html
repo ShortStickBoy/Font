@@ -1,0 +1,73 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        @font-face {
+            font-family: 'titleFont';
+            src: url('file:///android_asset/fonts/FZTYH_GBK.TTF');
+        }
+        @font-face {
+            font-family: 'textFont';
+            src: url('file:///android_asset/fonts/FZBIAOYSJW.TTF');
+        }
+        p {
+            font-family:textFont;
+            line-height:28px;
+            letter-spacing:1px;
+            color:#333333;
+            font-size:18px;
+        }
+        img {
+            width:100%
+        }
+    </style>
+</head>
+<body style="text-align:justify;
+             padding-left:15px;
+             padding-right:15px;
+             padding-top:15px;
+             padding-bottom:15px;">
+    <div id="div">
+        <p style="font-family:titleFont;
+              text-align:left;
+              line-height:33px;
+              letter-spacing:1px;
+              color:#333333;
+              font-size:24px;">
+            法媒称巴黎圣母院大火中存在“人为错误”
+        </p>
+        <p>
+            新华社巴黎4月24日电 据法国媒体24日报道，调查人员发现巴黎圣母院大火中存在“人为错误”。
+        </p>
+        <img src="http://5b0988e595225.cdn.sohucs.com/images/20190422/f5b4d39f707d4d289fe3e9210b680fec.jpeg">
+        <p>
+            法国资讯电视台BFMTV援引调查人员的话说，巴黎圣母院的火灾报警器在当地时间15日18时20分发出第一次警报，但负责查看火情的人员找错了地方，是一次“人为错误”。20分钟后，报警器发出第二次警报，大火此时已熊熊燃烧。
+        </p>
+        <p>
+            另据法国《鸭鸣报》报道，调查人员在现场发现了7个烟头，虽然还没有证据证明其为火灾源头，但圣母院修缮施工现场暴露出的问题已引起调查人员注意。
+        </p>
+        <img src="http://5b0988e595225.cdn.sohucs.com/images/20190422/7cf55446aec8494ebf8905a99b234b97.png">
+        <p>
+            负责圣母院修缮工作的公司已承认在巴黎圣母院塔尖周围搭建脚手架的工人违反了禁烟规定。
+        </p>
+        <p>
+            巴黎圣母院15日突发火灾，圣母院的屋顶和塔尖被烧毁，但主体建筑得以保存。
+        </p>
+        <p>
+            巴黎圣母院是哥特式建筑，位于巴黎市中心塞纳河畔，始建于1163年，于1345年完工。作为巴黎最具代表性的古迹之一，巴黎圣母院因法国作家雨果的同名小说而闻名于世，每年吸引游客大约1300万人次。
+        </p>
+    </div>
+
+    <script>
+        alert("s");
+        var img = document.getElementById('div').getElementsByTagName('img');
+        for (var i = 0; i < img.length; i++) {
+            (function (i) {
+                img[i].onclick = function sendToAndroid() {
+                    androidObject.send(img[i].getAttribute("src"));
+                }
+            })(i)
+        }
+    </script>
+</body>
+</html>
